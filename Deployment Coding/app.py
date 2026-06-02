@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import plotly.express as px  # Ensure plotly is installed before running
+import plotly.express as px
+from pathlib import Path
 
-# Define the data path globally
-data_path = r"C:\Users\email\Infosys Project\Deployment Coding\Player_Market_Value_Prediction_Dataset.csv"
+# Works locally and on Streamlit Cloud
+BASE_DIR = Path(__file__).parent
+data_path = BASE_DIR / "Player_Market_Value_Prediction_Dataset.csv"
 
 # Streamlit layout
 st.set_page_config(
